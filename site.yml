@@ -1,0 +1,7 @@
+---
+- name: Install npm
+  become: yes
+  hosts: web
+  gather_facts: no
+  roles:
+    - npm

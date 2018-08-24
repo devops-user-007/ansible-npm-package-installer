@@ -1,0 +1,15 @@
+---
+# tasks file for npm
+
+- name: Install packages
+  npm:
+    name: "{{ item }}"
+    state: present
+    global: no
+    path: /usr/lib/node_modules/
+  with_items:
+    - express
+    - body-parser
+    - mysql
+    - ejs
+    - req-flash
